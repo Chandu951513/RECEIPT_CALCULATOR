@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crown Fried Chicken</title>
+    <link rel="stylesheet" href="{% static 'css/table.css' %}">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                
+                <li><a href="{%url 'receipt'%}">Receipt-calculator</a></li>
+               
+            </ul>
+        </nav>
+    </header>
+
+    <br>
+
+    <br>
+    <main>
+        <h1>Result_Records</h1>
+    <div>
+        <table>
+            <thead>
+                <tr>
+                <th>basic_ammount</th>
+                <th>saving_ammount</th>
+                <th>ammount_saved</th>
+                <th>total_ammount</th>
+                <th>id</th>
+                </tr>
+            </thead>
+                 
+                <tbody>
+                
+                    {% if forms %}
+                    {% for form in forms  %}
+                    <tr>
+                    <td>{{form.basic_ammount}}</td>
+                    <td>{{form.saving_amount}}</td>
+                    <td>{{form.ammount_saved}}</td>
+                    <td>{{form.result_amount}}</td>
+                    <td><a href="">{{form.id}}</a></td>
+                    <td><button><a href=" /delete/{{form.id}}">delete</a></button></td>
+                   
+                </tr>
+                    {% endfor %}
+            {% endif %}
+            </tbody>
+           
+               
+          </table>
+         
+    </div>
+    <br>
+
+    <div>
+    Total:{{total}}
+    </div>
+
+
+
+
+</body>
+</html>

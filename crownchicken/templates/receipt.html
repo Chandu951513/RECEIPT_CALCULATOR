@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crown Fried Chicken</title>
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{% url 'receipt'%}">Receipt_calculator</a></li>
+                
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div>
+            <h1>Receipt_calculator</h1>
+            <form action="{% url 'receipt' %}" method='POST'>
+                {% csrf_token %}
+                basic_amount: <input type="text" name='basic_amount'>
+                   
+                   <button>resultamount</button>
+                   <button><a href="{% url 'records' %}">data</a></button>
+               </form>
+        </div>
+        <br>
+        <br>
+<div>
+
+    total:{{result}} <br>
+    amount_saved:{{amount_saved}} <br>
+    basic_ammount:{{basic_ammount}}
+</div>
+
+       
+    </main>
+ {% block content %}
+ 
+ {% endblock content %}
+    
+    
+</body>
+</html>

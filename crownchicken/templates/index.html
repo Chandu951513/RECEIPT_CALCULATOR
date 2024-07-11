@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crown Fried Chicken</title>
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                
+                <li><a href="{%url 'receipt'%}">Receipt-calculator</a></li>
+                
+
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="home">
+            <h1>Welcome to Crown Fried Chicken</h1>
+            <p>Where every bite is a delight!</p>
+            <button>Order Online</button>
+        </section>
+        <section id="menu">
+            <h2>Our Menu</h2>
+            <ul>
+                <li>
+                    <h3>2 Piece Mixed Chicken</h3>
+                    <p>W/Fries or Rice & Soda</p>
+                    <span>$8.99</span>
+                </li>
+                <li>
+                    <h3>4 Piece Wings</h3>
+                    <p>W/Fries or Rice & Soda</p>
+                    <span>$10.99</span>
+                </li>
+                <li>
+                    <h3>Shrimp Basket</h3>
+                    <p>W/Fries or Rice & Soda</p>
+                    <span>$12.99</span>
+                </li>
+                <!-- Add more menu items here -->
+            </ul>
+        </section>
+        <section id="about">
+            <h2>About Us</h2>
+            <p>We're a family-owned restaurant dedicated to serving the best fried chicken in town.</p>
+            <img src="about-us.jpg" alt="About Us Image">
+        </section>
+        <section id="contact">
+            <h2>Get in Touch</h2>
+            <p>Phone: 555-555-5555</p>
+            <p>Email: [info@crownfriedchicken.com](mailto:info@crownfriedchicken.com)</p>
+            <p>Address: 123 Main St, Anytown, USA</p>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
